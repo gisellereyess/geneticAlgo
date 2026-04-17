@@ -1,6 +1,6 @@
 from data import *
 import random
-# To create a randomly genereated chromosome, call Chromosome()
+# To create a randomly generated chromosome, call Chromosome()
 # To use existing values for crossover etc, call Chromosome(teacher_list, time_list, room_list)
 class Chromosome:
   def __init__(self, teacher_list=[], time_list=[], room_list=[]):

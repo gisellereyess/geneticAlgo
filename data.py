@@ -25,6 +25,23 @@ rooms = {
     "Slater 003": 32
 }
 
+rooms_names = [
+    "Beach 201",
+    "Beach 301",
+    "Frank 119",
+    "Loft 206",
+    "Loft 310",
+    "James 325",
+    "Roman 201",
+    "Roman 216",
+    "Slater 003"
+]
+
+NUM_CLASSES = 11
+NUM_TEACHERS = 10
+NUM_ROOMS = 9
+NUM_TIMES = 6
+
 times = [10, 11, 12, 13, 14, 15]
 
 teachers = ['Lock', 'Glen', 'Banks', 'Richards', 'Shaw', 'Singer', 'Uther', 'Tyler', 'Numen', 'Zeldin']

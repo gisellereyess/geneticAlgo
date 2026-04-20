@@ -30,13 +30,13 @@ def fit(schedules):
             
             #room sizes
             class_size = classes_data[sections_data[section]][0]
-            if(rooms_data[room] < class_size):                              #rooms is smaller than class
+            if(rooms_data[room] < class_size):                              #rooms smaller than class
                 score -= 0.5
-            elif(rooms_data[room] > class_size * 1.5):                      #room too big for class
-                score -= 0.2
-            elif(rooms_data[room] > class_size * 3):                        #room is much too big for class
+            elif(rooms_data[room] > class_size * 3):                      #room much too big for class
                 score -= 0.4
-            else:                                                           #room is proper size
+            elif(rooms_data[room] > class_size * 1.5):                        #room too big for class
+                score -= 0.2
+            else:                                                           #room proper size
                 score += 0.3
 
             #preferred facilitators

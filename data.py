@@ -45,3 +45,5 @@ NUM_TIMES = 6
 times = [10, 11, 12, 13, 14, 15]
 
 teachers = ['Lock', 'Glen', 'Banks', 'Richards', 'Shaw', 'Singer', 'Uther', 'Tyler', 'Numen', 'Zeldin']
+
+sections = ["SLA101A", "SLA101B", "SLA191A", "SLA191B", "SLA201", "SLA291", "SLA303", "SLA304", "SLA394", "SLA449", "SLA451"]

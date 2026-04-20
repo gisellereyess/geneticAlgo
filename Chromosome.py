@@ -3,24 +3,31 @@ import random
 # To create a randomly generated chromosome, call Chromosome()
 # To use existing values for crossover etc, call Chromosome(teacher_list, time_list, room_list)
 class Chromosome:
-  def __init__(self, teacher_list=[], time_list=[], room_list=[]):
+  def __init__(self, section_list=[], teacher_list=[], time_list=[], room_list=[]):
     self.fitness = 0
+    self.section_list = section_list.copy()
     self.teacher_list = teacher_list.copy()
     self.time_list = time_list.copy()
     self.room_list = room_list.copy()
     if len(teacher_list) == 0:
       for _ in range(NUM_CLASSES):
+        self.section_list.append(sections[random.randint(0, NUM_CLASSES - 1)])
         self.teacher_list.append(teachers[random.randint(0, NUM_TEACHERS - 1)])
         self.time_list.append(times[random.randint(0, NUM_TIMES - 1)])
         self.room_list.append(rooms_names[random.randint(0, NUM_ROOMS - 1)])
   def __str__(self):
-        return (f"Teachers: {self.teacher_list}\n" +
+        return (f"Sections: {self.section_list}\n" +
+        f"Teachers: {self.teacher_list}\n" +
         f"Times: {self.time_list}\n" +
         f"Rooms: {self.room_list}")
   def set_fitness(self, new_val):
     self.fitness = new_val
   def get_fitness(self):
     return self.fitness
+  def set_section_list(self, new_val):
+    self.section_list = new_val.copy()
+  def get_section_list(self):
+    return self.section_list.copy()
   def set_teacher_list(self, new_val):
     self.teacher_list = new_val.copy()
   def get_teacher_list(self):

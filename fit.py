@@ -10,7 +10,7 @@ def fit(schedules):
         sections = schedule.get_section_list()
         teachers = schedule.get_teacher_list()
         times = schedule.get_time_list()
-        rooms = schedule.get_toom_list()
+        rooms = schedule.get_room_list()
         score = 0
 
         for x in teachers_data:

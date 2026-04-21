@@ -14,7 +14,8 @@ class Chromosome:
         self.time_list.append(times[random.randint(0, NUM_TIMES - 1)])
         self.room_list.append(rooms_names[random.randint(0, NUM_ROOMS - 1)])
   def __str__(self):
-        return (f"Teachers: {self.teacher_list}\n" +
+        return (f"Sections: {sections}\n" +
+        f"Teachers: {self.teacher_list}\n" +
         f"Times: {self.time_list}\n" +
         f"Rooms: {self.room_list}")
   def set_fitness(self, new_val):

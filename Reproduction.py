@@ -1,5 +1,5 @@
 from data import *
-import Chromosome
+from Chromosome import Chromosome
 import random
 
 # Creates the new generation. pass in old gen as population

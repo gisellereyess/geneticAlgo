@@ -4,7 +4,6 @@ from data import classes as classes_data
 from data import rooms as rooms_data
 from data import teachers as teachers_data
 from data import sections as sections_data
-from data import times as times_data
 
 def fit(schedules):
     #iterates through each schedule to be evaluated
@@ -17,11 +16,11 @@ def fit(schedules):
         #goes through list of all teachers
         #checks facilitator load
         for x in teachers_data:
-            if(teachers.count(x) > 4):
+            if(teachers.count(x) > 4):                                                          #teacher over-scheduled
                 score -= 0.5
-            elif(teachers.count(x) < 3 and x != 'Tyler'):
+            elif(teachers.count(x) < 3 and x != 'Tyler'):                                       #teacher under-scheduled
                 score -= 0.4
-            if(x == 'Tyler' and teachers.count(x) > 1):
+            if(x == 'Tyler' and teachers.count(x) > 1):                                         #Dr.Tyler over-scheduled
                 score -= 0.4
 
         #checks consecutive time rules for SLA101

@@ -1,7 +1,6 @@
 from Chromosome import Chromosome
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy
 from fit import fit
 from Reproduction import make_kids
 POP_SIZE = 300
